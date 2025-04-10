@@ -19,3 +19,17 @@
 [2025-04-10 11:53:26,079: INFO: common: created directory at: path/to/your/artifacts]
 [2025-04-10 11:53:26,081: INFO: common: created directory at: artifacts/data_ingestion]
 [2025-04-10 11:53:29,094: INFO: 227420655: File is downloaded]
+[2025-04-10 14:51:00,259: INFO: main: stageData Ingestion Stage initiated]
+[2025-04-10 14:51:00,361: ERROR: main: name 'DataIngestionTrainingPipeline' is not defined]
+Traceback (most recent call last):
+  File "E:\textsummarizer\main.py", line 8, in <module>
+    data_ingestion_pipeline = DataIngestionTrainingPipeline()
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'DataIngestionTrainingPipeline' is not defined. Did you mean: 'DataIngestionPipeline'?
+[2025-04-10 14:51:15,630: INFO: main: stageData Ingestion Stage initiated]
+[2025-04-10 14:51:15,646: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 14:51:15,646: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 14:51:15,646: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 14:51:15,646: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-10 14:51:19,027: INFO: data_ingestion: File is downloaded]
+[2025-04-10 14:51:19,223: INFO: main: stageData Ingestion Stage completed]
