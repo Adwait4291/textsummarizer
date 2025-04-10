@@ -33,3 +33,334 @@ NameError: name 'DataIngestionTrainingPipeline' is not defined. Did you mean: 'D
 [2025-04-10 14:51:15,646: INFO: common: created directory at: artifacts/data_ingestion]
 [2025-04-10 14:51:19,027: INFO: data_ingestion: File is downloaded]
 [2025-04-10 14:51:19,223: INFO: main: stageData Ingestion Stage completed]
+[2025-04-10 15:20:38,599: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 15:29:26,919: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 15:29:28,548: ERROR: common: An unexpected error occurred while reading or parsing YAML file at config\config.yaml: while scanning a simple key
+  in "config\config.yaml", line 13, column 5
+could not find expected ':'
+  in "config\config.yaml", line 16, column 1]
+[2025-04-10 15:30:29,332: ERROR: common: An unexpected error occurred while reading or parsing YAML file at config\config.yaml: while parsing a block mapping
+  in "config\config.yaml", line 1, column 1
+expected <block end>, but found '<block mapping start>'
+  in "config\config.yaml", line 10, column 2]
+[2025-04-10 15:31:57,542: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 15:31:58,037: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 15:31:58,041: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 15:31:58,044: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 15:31:58,046: INFO: common: created directory at: artifacts/data_transformation]
+[2025-04-10 15:35:11,313: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 15:35:11,719: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 15:35:11,721: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 15:35:11,723: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 15:35:11,725: INFO: common: created directory at: artifacts/data_transformation]
+[2025-04-10 15:36:22,150: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 15:36:22,541: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 15:36:22,541: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 15:36:22,541: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 15:36:22,548: INFO: common: created directory at: artifacts/data_transformation]
+[2025-04-10 15:40:39,355: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 15:40:39,734: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 15:40:39,737: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 15:40:39,738: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 15:40:39,740: INFO: common: created directory at: artifacts/data_transformation]
+[2025-04-10 16:09:23,593: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 16:09:23,593: INFO: config: TensorFlow version 2.18.0 available.]
+[2025-04-10 16:09:26,256: INFO: main: stage Data Ingestion Stage initiated]
+[2025-04-10 16:09:26,272: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:09:26,272: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:09:26,272: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:09:26,272: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-10 16:09:26,272: INFO: data_ingestion: File already exits]
+[2025-04-10 16:09:26,788: INFO: main: stage Data Ingestion Stage completed]
+[2025-04-10 16:09:26,788: INFO: main: stage Data Transformation Stage initiated]
+[2025-04-10 16:09:26,788: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:09:26,788: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:09:26,788: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:09:26,788: INFO: common: created directory at: artifacts/data_transformation]
+[2025-04-10 16:09:26,788: ERROR: main: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.]
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 424, in cached_files
+    hf_hub_download(
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\textsummarizer\main.py", line 22, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "E:\textsummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 12, in initiate_data_transformation
+    data_transformation_=DataTransformation(config=data_transformation_config)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\textsummarizer\src\textSummarizer\components\data_transformation.py", line 12, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\auto\tokenization_auto.py", line 945, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\auto\tokenization_auto.py", line 777, in get_tokenizer_config
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 266, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 471, in cached_files
+    _get_cache_file_to_return(path_or_repo_id, filename, cache_dir, revision) for filename in full_filenames
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 134, in _get_cache_file_to_return
+    resolved_file = try_to_load_from_cache(path_or_repo_id, full_filename, cache_dir=cache_dir, revision=revision)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.
+[2025-04-10 16:14:22,519: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 16:14:22,535: INFO: config: TensorFlow version 2.18.0 available.]
+[2025-04-10 16:14:22,834: INFO: main: stage Data Ingestion Stage initiated]
+[2025-04-10 16:14:22,887: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:14:22,888: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:14:22,888: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:14:22,888: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-10 16:14:22,888: INFO: data_ingestion: File already exits]
+[2025-04-10 16:14:23,013: INFO: main: stage Data Ingestion Stage completed]
+[2025-04-10 16:14:23,013: INFO: main: stage Data Transformation Stage initiated]
+[2025-04-10 16:14:23,013: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:14:23,013: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:14:23,013: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:14:23,013: INFO: common: created directory at: data_transformation]
+[2025-04-10 16:14:23,013: ERROR: main: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.]
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 424, in cached_files
+    hf_hub_download(
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\textsummarizer\main.py", line 22, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "E:\textsummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 12, in initiate_data_transformation
+    data_transformation_=DataTransformation(config=data_transformation_config)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\textsummarizer\src\textSummarizer\components\data_transformation.py", line 12, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\auto\tokenization_auto.py", line 945, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\auto\tokenization_auto.py", line 777, in get_tokenizer_config
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 266, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 471, in cached_files
+    _get_cache_file_to_return(path_or_repo_id, filename, cache_dir, revision) for filename in full_filenames
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 134, in _get_cache_file_to_return
+    resolved_file = try_to_load_from_cache(path_or_repo_id, full_filename, cache_dir=cache_dir, revision=revision)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.
+[2025-04-10 16:22:23,038: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 16:22:23,045: INFO: config: TensorFlow version 2.18.0 available.]
+[2025-04-10 16:22:23,746: INFO: main: stage Data Ingestion Stage initiated]
+[2025-04-10 16:22:23,773: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:22:23,775: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:22:23,776: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:22:23,777: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-10 16:22:23,777: INFO: data_ingestion: File already exits]
+[2025-04-10 16:22:24,003: INFO: main: stage Data Ingestion Stage completed]
+[2025-04-10 16:22:24,003: INFO: main: stage Data Transformation Stage initiated]
+[2025-04-10 16:22:24,006: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:22:24,006: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:22:24,007: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:22:24,007: INFO: common: created directory at: data_transformation]
+[2025-04-10 16:22:24,007: ERROR: main: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.]
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 424, in cached_files
+    hf_hub_download(
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\textsummarizer\main.py", line 22, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "E:\textsummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 12, in initiate_data_transformation
+    data_transformation_=DataTransformation(config=data_transformation_config)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\textsummarizer\src\textSummarizer\components\data_transformation.py", line 12, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\auto\tokenization_auto.py", line 945, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\auto\tokenization_auto.py", line 777, in get_tokenizer_config
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 266, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 471, in cached_files
+    _get_cache_file_to_return(path_or_repo_id, filename, cache_dir, revision) for filename in full_filenames
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 134, in _get_cache_file_to_return
+    resolved_file = try_to_load_from_cache(path_or_repo_id, full_filename, cache_dir=cache_dir, revision=revision)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.
+[2025-04-10 16:24:08,296: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 16:24:08,296: INFO: config: TensorFlow version 2.18.0 available.]
+[2025-04-10 16:24:08,716: INFO: main: stage Data Ingestion Stage initiated]
+[2025-04-10 16:24:08,738: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:24:08,742: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:24:08,743: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:24:08,743: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-10 16:24:08,743: INFO: data_ingestion: File already exits]
+[2025-04-10 16:24:08,958: INFO: main: stage Data Ingestion Stage completed]
+[2025-04-10 16:24:08,958: INFO: main: stage Data Transformation Stage initiated]
+[2025-04-10 16:24:08,972: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:24:08,972: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:24:08,972: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:24:08,972: INFO: common: created directory at: data_transformation]
+[2025-04-10 16:24:08,972: ERROR: main: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.]
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 424, in cached_files
+    hf_hub_download(
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\textsummarizer\main.py", line 22, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "E:\textsummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 12, in initiate_data_transformation
+    data_transformation_=DataTransformation(config=data_transformation_config)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\textsummarizer\src\textSummarizer\components\data_transformation.py", line 12, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\auto\tokenization_auto.py", line 945, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\auto\tokenization_auto.py", line 777, in get_tokenizer_config
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 266, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 471, in cached_files
+    _get_cache_file_to_return(path_or_repo_id, filename, cache_dir, revision) for filename in full_filenames
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\utils\hub.py", line 134, in _get_cache_file_to_return
+    resolved_file = try_to_load_from_cache(path_or_repo_id, full_filename, cache_dir=cache_dir, revision=revision)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\utils\_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'google\pegasus-cnn_dailymail'.
+[2025-04-10 16:34:24,954: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 16:34:24,954: INFO: config: TensorFlow version 2.18.0 available.]
+[2025-04-10 16:34:25,673: INFO: main: stage Data Ingestion Stage initiated]
+[2025-04-10 16:34:25,676: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:34:25,676: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:34:25,679: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:34:25,679: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-10 16:34:25,679: INFO: data_ingestion: File already exits]
+[2025-04-10 16:34:26,330: INFO: main: stage Data Ingestion Stage completed]
+[2025-04-10 16:34:26,330: INFO: main: stage Data Transformation Stage initiated]
+[2025-04-10 16:34:26,338: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:34:26,341: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:34:26,341: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:34:26,341: INFO: common: created directory at: data_transformation]
+[2025-04-10 16:34:26,341: ERROR: main: Path.replace() takes 2 positional arguments but 3 were given]
+Traceback (most recent call last):
+  File "E:\textsummarizer\main.py", line 22, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "E:\textsummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 12, in initiate_data_transformation
+    data_transformation_=DataTransformation(config=data_transformation_config)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\textsummarizer\src\textSummarizer\components\data_transformation.py", line 12, in __init__
+    tokenizer_name = config.tokenizer_name.replace('\\', '/')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Path.replace() takes 2 positional arguments but 3 were given
+[2025-04-10 16:40:32,819: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 16:40:32,819: INFO: config: TensorFlow version 2.18.0 available.]
+[2025-04-10 16:40:33,616: INFO: main: stage Data Ingestion Stage initiated]
+[2025-04-10 16:40:33,616: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:40:33,616: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:40:33,616: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:40:33,616: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-10 16:40:33,616: INFO: data_ingestion: File already exits]
+[2025-04-10 16:40:33,851: INFO: main: stage Data Ingestion Stage completed]
+[2025-04-10 16:40:33,851: INFO: main: stage Data Transformation Stage initiated]
+[2025-04-10 16:40:33,854: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:40:33,854: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:40:33,854: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:40:33,855: INFO: common: created directory at: data_transformation]
+[2025-04-10 16:40:37,241: ERROR: main: Directory artifacts\data_ingestion\samsum_dataset\samsum not found]
+Traceback (most recent call last):
+  File "E:\textsummarizer\main.py", line 22, in <module>
+    data_transformation_pipeline.initiate_data_transformation()
+  File "E:\textsummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 13, in initiate_data_transformation
+    data_transformation_.convert()
+  File "E:\textsummarizer\src\textSummarizer\components\data_transformation.py", line 36, in convert
+    dataset_samsum = load_from_disk(self.config.data_path)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\datasets\load.py", line 2140, in load_from_disk
+    raise FileNotFoundError(f"Directory {dataset_path} not found")
+FileNotFoundError: Directory artifacts\data_ingestion\samsum_dataset\samsum not found
+[2025-04-10 16:45:32,903: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 16:45:32,907: INFO: config: TensorFlow version 2.18.0 available.]
+[2025-04-10 16:45:33,280: INFO: main: stage Data Ingestion Stage initiated]
+[2025-04-10 16:45:33,284: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:45:33,284: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:45:33,284: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:45:33,286: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-10 16:45:33,286: INFO: data_ingestion: File already exits]
+[2025-04-10 16:45:33,494: INFO: main: stage Data Ingestion Stage completed]
+[2025-04-10 16:45:33,494: INFO: main: stage Data Transformation Stage initiated]
+[2025-04-10 16:45:33,498: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:45:33,499: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:45:33,499: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:45:33,499: INFO: common: created directory at: data_transformation]
+[2025-04-10 16:45:42,807: INFO: main: stage Data Transformation Stage completed]
+[2025-04-10 16:48:13,491: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-10 16:48:13,507: INFO: config: TensorFlow version 2.18.0 available.]
+[2025-04-10 16:48:13,862: INFO: main: stage Data Ingestion Stage initiated]
+[2025-04-10 16:48:13,878: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:48:13,878: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:48:13,878: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:48:13,880: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-10 16:48:13,880: INFO: data_ingestion: File already exits]
+[2025-04-10 16:48:14,023: INFO: main: stage Data Ingestion Stage completed]
+[2025-04-10 16:48:14,023: INFO: main: stage Data Transformation Stage initiated]
+[2025-04-10 16:48:14,030: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-10 16:48:14,030: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-10 16:48:14,030: INFO: common: created directory at: path/to/your/artifacts]
+[2025-04-10 16:48:14,031: INFO: common: created directory at: data_transformation]
+[2025-04-10 16:48:16,883: INFO: main: stage Data Transformation Stage completed]
